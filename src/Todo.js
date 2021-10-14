@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TodoForm from './TodoForm';
-import { RiCloseCircleLine } from 'react-icons/ri';
-import { TiEdit } from 'react-icons/ti';
+//import { RiCloseCircleLine } from 'react-icons/ri';
+//import { TiEdit } from 'react-icons/ti';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -42,11 +42,11 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
                   {todo.text}
                   </div>
                   <div className='icons'>
-                  <RiCloseCircleLine
+                  <button
                     onClick={() => removeTodo(todo.id)}
                     className='delete-icon'
                           />
-                          <TiEdit
+                          <button
                             onClick={() => setEdit({ id: todo.id, value: todo.text })}
                             className='edit-icon'
                             />
